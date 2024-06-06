@@ -1,0 +1,15 @@
+{% extends 'base1.html' %}
+
+{% block head %}
+<title>Добавление записи</title>
+{% endblock %}
+
+{% block body %}
+<h1>Добавление записи</h1>
+<form method="post" enctype="multipart/form-data">
+    <input class='form-control' type='text' name="title"  placeholder="Введите заголовок">
+    <input class="form-control" type="text" name="content" placeholder="Введите описание">
+    <input type="file" name="file">
+    <button class="btn btn-success" type="submit">Добавить</button>
+</form>
+{% endblock %}

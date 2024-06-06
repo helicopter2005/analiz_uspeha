@@ -1,0 +1,15 @@
+body
+{
+  color: #3c3e40;
+  background: #7f9ab3
+  height: 100vh
+}
+
+.header_img{
+ height: 64px;
+ weight: 64px;
+}
+
+a{
+ text-decoration: none;
+}

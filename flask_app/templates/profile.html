@@ -1,0 +1,28 @@
+{% extends 'base1.html' %}
+
+{% block head %}
+    <title>Главная страница</title>
+{% endblock %}
+
+{% block body %}
+
+<h1>Все записи</h1>
+<div class="container">
+<div class="row">
+  {% for post in posts %}
+  <div class="col-md-6 item">
+    <div class="item-in">
+      <h4>{{post[1].title}}</h4>
+      <div class="seperator"></div>
+      <p>{{post[1].content}}</p>
+      <a href="{{ url_for('post_show1', id_user=post[0].id, id_post=post[1].id) }}">Показать графики
+        <i class="fa fa-long-arrow-right"></i>
+      </a>
+      <a href="{{url_for('post_delete', id_user=post[0].id, id_post=post[1].id)}}">Удалить запись
+        <i class="fa fa-long-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+   {% endfor %}
+  </div>
+{% endblock %}
